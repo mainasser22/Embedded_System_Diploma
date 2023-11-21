@@ -41,8 +41,8 @@ void DIO_VoidSetPinValue(u8 Copy_u8PORT,u8 Copy_u8PIN,u8 Copy_u8Value)
 	  {
 		  switch (Copy_u8PORT)
 		  {
-		  	case DIO_PORTB: SET_BIT(PORTA,Copy_u8PIN); break;
-		  	case DIO_PORTA: SET_BIT(PORTB,Copy_u8PIN); break;
+		  	case DIO_PORTB: SET_BIT(PORTB,Copy_u8PIN); break;
+		  	case DIO_PORTA: SET_BIT(PORTA,Copy_u8PIN); break;
 		    case DIO_PORTC: SET_BIT(PORTC,Copy_u8PIN); break;
 		  	case DIO_PORTD: SET_BIT(PORTD,Copy_u8PIN); break;
 		  }
