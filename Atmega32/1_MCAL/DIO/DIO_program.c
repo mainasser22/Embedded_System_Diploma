@@ -43,11 +43,8 @@ void DIO_VoidSetPinValue(u8 Copy_u8PORT,u8 Copy_u8PIN,u8 Copy_u8Value)
 		  {
 		  	case DIO_PORTB: SET_BIT(PORTB,Copy_u8PIN); break;
 		  	case DIO_PORTA: SET_BIT(PORTA,Copy_u8PIN); break;
-<<<<<<< HEAD
-		    case DIO_PORTC: SET_BIT(PORTC,Copy_u8PIN); break;
-=======
 		        case DIO_PORTC: SET_BIT(PORTC,Copy_u8PIN); break;
->>>>>>> 1a2a5bbcdbf3d18da49989f8f0aa6729c2fd253a
+		        case DIO_PORTC: SET_BIT(PORTC,Copy_u8PIN); break;
 		  	case DIO_PORTD: SET_BIT(PORTD,Copy_u8PIN); break;
 		  }
 	  }
