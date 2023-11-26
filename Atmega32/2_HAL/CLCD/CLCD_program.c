@@ -22,39 +22,13 @@
 /***************************************************************************************/
 
 /*
-
-###########  8 Bits Mode
- -----------                   ----------
- | ATmega32  |                 |   LCD    |
- |           |                 |          |
- |        PA7|---------------->|D7        |
- |        PA6|---------------->|D6        |
- |        PA5|---------------->|D5        |
- |        PA4|---------------->|D4        |
- |        PA3|---------------->|D3        |
- |        PA2|---------------->|D2        |
- |        PA1|---------------->|D1        |
- |        PA0|---------------->|D0        |
- |           |                 |          |
- |        PC2|---------------->|E         |
- |        PC1|---------------->|RW        |
- |        PC0|---------------->|RS        |
- -----------                   ----------
- */
-/***************************************************************************************/
-
-
-//----------------------------------------------------------------------------------------------------------------------------------------------------
-/*
 * Breif : This Function Apply initialization sequence for LCD module
 * Parameters : nothing
 * return : nothing
 */
 void CLCD_voidInit        ( void ){
 
-
-
-	//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<      8 Bits Mode       >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	//8 Bits Mode
 
 	#if   CLCD_MODE == 8
 
@@ -62,10 +36,10 @@ void CLCD_voidInit        ( void ){
 	_delay_ms(50);
 
 	// All Pins as OutPut pins
-	DIO_enumSetPortDirection ( CLCD_DATA_PORT    , DIO_PORT_OUTPUT           );
-	DIO_enumSetPinDirection  ( CLCD_CONTROL_PORT , CLCD_RS , DIO_PIN_OUTPUT  );
-	DIO_enumSetPinDirection  ( CLCD_CONTROL_PORT , CLCD_RW , DIO_PIN_OUTPUT  );
-	DIO_enumSetPinDirection  ( CLCD_CONTROL_PORT , CLCD_EN , DIO_PIN_OUTPUT  );
+	DIO_VoidSetPortDirection ( CLCD_DATA_PORT    , DIO_PORT_OUTPUT           );
+	DIO_VoidSetPinDirection  ( CLCD_CONTROL_PORT , CLCD_RS , DIO_PIN_OUTPUT  );
+	DIO_VoidSetPinDirection  ( CLCD_CONTROL_PORT , CLCD_RW , DIO_PIN_OUTPUT  );
+	DIO_VoidSetPinDirection  ( CLCD_CONTROL_PORT , CLCD_EN , DIO_PIN_OUTPUT  );
 
 	/* Return cursor to the first position on the first line  */
 	CLCD_voidSendCommand(lcd_Home);
@@ -88,19 +62,19 @@ void CLCD_voidInit        ( void ){
 
 
 
-	//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<      4 Bits Mode       >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	//4 Bits Mode
 
 	#elif   CLCD_MODE == 4
 
 	// 1- must wait more than 30 ms before any action (VDD rises to 4.5 v)
 	_delay_ms(50);
-	DIO_enumSetPinDirection      (CLCD_DATA_PORT,DIO_PIN4,DIO_PIN_OUTPUT);
-	DIO_enumSetPinDirection      (CLCD_DATA_PORT,DIO_PIN5,DIO_PIN_OUTPUT);
-	DIO_enumSetPinDirection      (CLCD_DATA_PORT,DIO_PIN6,DIO_PIN_OUTPUT);
-	DIO_enumSetPinDirection      (CLCD_DATA_PORT,DIO_PIN7,DIO_PIN_OUTPUT);
-	DIO_enumSetPinDirection  ( CLCD_CONTROL_PORT , CLCD_RS , DIO_PIN_OUTPUT  );
-	DIO_enumSetPinDirection  ( CLCD_CONTROL_PORT , CLCD_RW , DIO_PIN_OUTPUT  );
-	DIO_enumSetPinDirection  ( CLCD_CONTROL_PORT , CLCD_EN , DIO_PIN_OUTPUT  );
+	DIO_VoidSetPinDirection      (CLCD_DATA_PORT,DIO_PIN4,DIO_PIN_OUTPUT);
+	DIO_VoidSetPinDirection      (CLCD_DATA_PORT,DIO_PIN5,DIO_PIN_OUTPUT);
+	DIO_VoidSetPinDirection      (CLCD_DATA_PORT,DIO_PIN6,DIO_PIN_OUTPUT);
+	DIO_VoidSetPinDirection      (CLCD_DATA_PORT,DIO_PIN7,DIO_PIN_OUTPUT);
+	DIO_VoidSetPinDirection      ( CLCD_CONTROL_PORT , CLCD_RS , DIO_PIN_OUTPUT  );
+	DIO_VoidSetPinDirection      ( CLCD_CONTROL_PORT , CLCD_RW , DIO_PIN_OUTPUT  );
+	DIO_VoidSetPinDirection      ( CLCD_CONTROL_PORT , CLCD_EN , DIO_PIN_OUTPUT  );
 
 
 
@@ -140,19 +114,19 @@ void CLCD_voidInit        ( void ){
 */
 void CLCD_voidSendData    ( u8 Copy_u8Data ){
 
-	//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<      8 Bits Mode       >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	//8 Bits Mode
 	#if   CLCD_MODE == 8
 
-	DIO_enumSetPortValue ( CLCD_DATA_PORT    , Copy_u8Data        );
-	DIO_enumSetPinValue  ( CLCD_CONTROL_PORT , CLCD_RS , DIO_PIN_HIGH );
-	DIO_enumSetPinValue  ( CLCD_CONTROL_PORT , CLCD_RW , DIO_PIN_LOW  );
+	DIO_VoidSetPortValue ( CLCD_DATA_PORT    , Copy_u8Data        );
+	DIO_VoidSetPinValue  ( CLCD_CONTROL_PORT , CLCD_RS , DIO_PIN_HIGH );
+	DIO_VoidSetPinValue  ( CLCD_CONTROL_PORT , CLCD_RW , DIO_PIN_LOW  );
 	CLCD_voidSendFallingEdge();
 
-	//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<      4 Bits Mode       >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	//4 Bits Mode
 	#elif   CLCD_MODE == 4
 
-	DIO_enumSetPinValue  ( CLCD_CONTROL_PORT , CLCD_RS , DIO_PIN_HIGH );
-	DIO_enumSetPinValue  ( CLCD_CONTROL_PORT , CLCD_RW , DIO_PIN_LOW  );
+	DIO_VoidSetPinValue  ( CLCD_CONTROL_PORT , CLCD_RS , DIO_PIN_HIGH );
+	DIO_VoidSetPinValue  ( CLCD_CONTROL_PORT , CLCD_RW , DIO_PIN_LOW  );
 	DIO_voidWriteHighNibbles (CLCD_DATA_PORT ,(Copy_u8Data>>4));            // send the most 4 bits of data to high nibbles
 	CLCD_voidSendFallingEdge();
 	DIO_voidWriteHighNibbles (CLCD_DATA_PORT ,Copy_u8Data);               // send the least 4 bits of data to high nibbles
@@ -174,20 +148,20 @@ void CLCD_voidSendData    ( u8 Copy_u8Data ){
 */
 void CLCD_voidSendCommand ( u8 Copy_u8Command ){
 
-	//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<      8 Bits Mode       >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	//8 Bits Mode
 	#if   CLCD_MODE == 8
 
-	DIO_enumSetPortValue ( CLCD_DATA_PORT    , Copy_u8Command     );
-	DIO_enumSetPinValue  ( CLCD_CONTROL_PORT , CLCD_RS , DIO_PIN_LOW  );
+	DIO_VoidSetPortValue ( CLCD_DATA_PORT    , Copy_u8Command     );
+	DIO_VoidSetPinValue  ( CLCD_CONTROL_PORT , CLCD_RS , DIO_PIN_LOW  );
 	// RW always connect to GND to Write
-	DIO_enumSetPinValue          (CLCD_CONTROL_PORT,CLCD_RW , DIO_PIN_LOW    );
+	DIO_VoidSetPinValue  (CLCD_CONTROL_PORT,CLCD_RW , DIO_PIN_LOW    );
 	CLCD_voidSendFallingEdge();
 
-	//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<      4 Bits Mode       >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	//4 Bits Mode
 	#elif   CLCD_MODE == 4
 
-	DIO_enumSetPinValue  ( CLCD_CONTROL_PORT , CLCD_RS , DIO_PIN_LOW  );
-	DIO_enumSetPinValue  ( CLCD_CONTROL_PORT , CLCD_RW , DIO_PIN_LOW  );
+	DIO_VoidSetPinValue  ( CLCD_CONTROL_PORT , CLCD_RS , DIO_PIN_LOW  );
+	DIO_VoidSetPinValue  ( CLCD_CONTROL_PORT , CLCD_RW , DIO_PIN_LOW  );
 	DIO_voidWriteHighNibbles (CLCD_DATA_PORT ,Copy_u8Command>>4);             // send the most 4 bits of data to high nibbles
 	CLCD_voidSendFallingEdge();
 	DIO_voidWriteHighNibbles (CLCD_DATA_PORT ,Copy_u8Command);                // send the least 4 bits of data to high nibbles
@@ -312,9 +286,9 @@ void CLCD_voidClearScreen(void)
 */
 static void CLCD_voidSendFallingEdge(void)
 {
-	DIO_enumSetPinValue  ( CLCD_CONTROL_PORT , CLCD_EN , DIO_PIN_HIGH );
+	DIO_VoidSetPinValue  ( CLCD_CONTROL_PORT , CLCD_EN , DIO_PIN_HIGH );
 	_delay_ms(1);
-	DIO_enumSetPinValue  ( CLCD_CONTROL_PORT , CLCD_EN , DIO_PIN_LOW  );
+	DIO_VoidSetPinValue  ( CLCD_CONTROL_PORT , CLCD_EN , DIO_PIN_LOW  );
 	_delay_ms(1);
 }
 
