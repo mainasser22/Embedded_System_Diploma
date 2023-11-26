@@ -41,7 +41,7 @@ typedef enum
     IDLE = 0,
     RIGHT_BLINK,
     LEFT_BLINK,
-    HAZZARD_BLINK
+    HAZARD_BLINK
 } MODE_enutModeState;
 
 /******************************************************************************/

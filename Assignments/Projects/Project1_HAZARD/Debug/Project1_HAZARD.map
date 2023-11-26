@@ -165,7 +165,7 @@ LOAD d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x50d8
+.text           0x00000000     0x4d76
  *(.vectors)
  .vectors       0x00000000       0x54 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -290,116 +290,116 @@ LOAD d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.
                 0x0000260e       0x3c ./SW/SW_program.o
                 0x0000260e                SW_voidInit
  .text.SW_u8GetPressed
-                0x0000264a       0x8a ./SW/SW_program.o
+                0x0000264a       0x7e ./SW/SW_program.o
                 0x0000264a                SW_u8GetPressed
  .text.SSD_voidInitialDataPort
-                0x000026d4       0x2a ./SSD/SSD_program.o
-                0x000026d4                SSD_voidInitialDataPort
+                0x000026c8       0x2a ./SSD/SSD_program.o
+                0x000026c8                SSD_voidInitialDataPort
  .text.SSD_voidSendNumber
-                0x000026fe       0x6a ./SSD/SSD_program.o
-                0x000026fe                SSD_voidSendNumber
+                0x000026f2       0x6a ./SSD/SSD_program.o
+                0x000026f2                SSD_voidSendNumber
+ .text.SSD_voidTurnSegment
+                0x0000275c       0x6a ./SSD/SSD_program.o
+                0x0000275c                SSD_voidTurnSegment
  .text.SSD_voidEnable
-                0x00002768       0x60 ./SSD/SSD_program.o
-                0x00002768                SSD_voidEnable
+                0x000027c6       0x60 ./SSD/SSD_program.o
+                0x000027c6                SSD_voidEnable
  .text.SSD_voidDisable
-                0x000027c8       0x60 ./SSD/SSD_program.o
-                0x000027c8                SSD_voidDisable
- .text.DIO_enumSetPinDirection
-                0x00002828      0x21e ./DIO/DIO_program.o
-                0x00002828                DIO_enumSetPinDirection
- .text.DIO_enumSetPinValue
-                0x00002a46      0x21e ./DIO/DIO_program.o
-                0x00002a46                DIO_enumSetPinValue
- .text.DIO_enumGetPinValue
-                0x00002c64      0x18a ./DIO/DIO_program.o
-                0x00002c64                DIO_enumGetPinValue
- .text.DIO_enumTogglePinValue
-                0x00002dee      0x110 ./DIO/DIO_program.o
-                0x00002dee                DIO_enumTogglePinValue
- .text.DIO_enumConnectPullup
-                0x00002efe      0x2b2 ./DIO/DIO_program.o
-                0x00002efe                DIO_enumConnectPullup
- .text.DIO_enumSetPortDirection
-                0x000031b0       0x9a ./DIO/DIO_program.o
-                0x000031b0                DIO_enumSetPortDirection
- .text.DIO_enumSetPortValue
-                0x0000324a       0x9a ./DIO/DIO_program.o
-                0x0000324a                DIO_enumSetPortValue
- .text.DIO_enumTogglePortValue
-                0x000032e4       0xaa ./DIO/DIO_program.o
-                0x000032e4                DIO_enumTogglePortValue
- .text.DIO_enumGetPortValue
-                0x0000338e       0xae ./DIO/DIO_program.o
-                0x0000338e                DIO_enumGetPortValue
- .text.DIO_voidWriteHighNibbles
-                0x0000343c       0xf8 ./DIO/DIO_program.o
-                0x0000343c                DIO_voidWriteHighNibbles
+                0x00002826       0x60 ./SSD/SSD_program.o
+                0x00002826                SSD_voidDisable
+ .text.DIO_VoidSetPinDirection
+                0x00002886      0x200 ./DIO/DIO_program.o
+                0x00002886                DIO_VoidSetPinDirection
+ .text.DIO_VoidSetPinValue
+                0x00002a86      0x200 ./DIO/DIO_program.o
+                0x00002a86                DIO_VoidSetPinValue
+ .text.DIO_VoidTogglePinValue
+                0x00002c86       0xfa ./DIO/DIO_program.o
+                0x00002c86                DIO_VoidTogglePinValue
+ .text.DIO_VoidGetPinValue
+                0x00002d80      0x158 ./DIO/DIO_program.o
+                0x00002d80                DIO_VoidGetPinValue
+ .text.DIO_VoidSetPortDirection
+                0x00002ed8       0x82 ./DIO/DIO_program.o
+                0x00002ed8                DIO_VoidSetPortDirection
+ .text.DIO_VoidSetPortValue
+                0x00002f5a       0x82 ./DIO/DIO_program.o
+                0x00002f5a                DIO_VoidSetPortValue
+ .text.DIO_VoidTogglePortValue
+                0x00002fdc       0x96 ./DIO/DIO_program.o
+                0x00002fdc                DIO_VoidTogglePortValue
+ .text.DIO_VoidGetPortValue
+                0x00003072       0x84 ./DIO/DIO_program.o
+                0x00003072                DIO_VoidGetPortValue
  .text.DIO_voidWriteLowNibbles
-                0x00003534       0xf6 ./DIO/DIO_program.o
-                0x00003534                DIO_voidWriteLowNibbles
+                0x000030f6       0xe8 ./DIO/DIO_program.o
+                0x000030f6                DIO_voidWriteLowNibbles
+ .text.DIO_voidWriteHighNibbles
+                0x000031de       0xea ./DIO/DIO_program.o
+                0x000031de                DIO_voidWriteHighNibbles
  .text.CLCD_voidInit
-                0x0000362a      0x52e ./CLCD/CLCD_program.o
-                0x0000362a                CLCD_voidInit
+                0x000032c8      0x52e ./CLCD/CLCD_program.o
+                0x000032c8                CLCD_voidInit
  .text.CLCD_voidSendData
-                0x00003b58      0x140 ./CLCD/CLCD_program.o
-                0x00003b58                CLCD_voidSendData
+                0x000037f6      0x140 ./CLCD/CLCD_program.o
+                0x000037f6                CLCD_voidSendData
  .text.CLCD_voidSendCommand
-                0x00003c98      0x140 ./CLCD/CLCD_program.o
-                0x00003c98                CLCD_voidSendCommand
+                0x00003936      0x140 ./CLCD/CLCD_program.o
+                0x00003936                CLCD_voidSendCommand
  .text.CLCD_voidSendString
-                0x00003dd8       0x52 ./CLCD/CLCD_program.o
-                0x00003dd8                CLCD_voidSendString
+                0x00003a76       0x52 ./CLCD/CLCD_program.o
+                0x00003a76                CLCD_voidSendString
  .text.CLCD_voidSendNumber
-                0x00003e2a      0x876 ./CLCD/CLCD_program.o
-                0x00003e2a                CLCD_voidSendNumber
+                0x00003ac8      0x876 ./CLCD/CLCD_program.o
+                0x00003ac8                CLCD_voidSendNumber
  .text.CLCD_voidSetPosition
-                0x000046a0      0x14c ./CLCD/CLCD_program.o
-                0x000046a0                CLCD_voidSetPosition
+                0x0000433e      0x14c ./CLCD/CLCD_program.o
+                0x0000433e                CLCD_voidSetPosition
  .text.CLCD_voidClearScreen
-                0x000047ec      0x110 ./CLCD/CLCD_program.o
-                0x000047ec                CLCD_voidClearScreen
+                0x0000448a      0x110 ./CLCD/CLCD_program.o
+                0x0000448a                CLCD_voidClearScreen
  .text.CLCD_voidSendFallingEdge
-                0x000048fc      0x202 ./CLCD/CLCD_program.o
- .text.main     0x00004afe      0x10e ./main.o
-                0x00004afe                main
- .text.vidInit  0x00004c0c       0x76 ./main.o
+                0x0000459a      0x202 ./CLCD/CLCD_program.o
+ .text.main     0x0000479c      0x10e ./main.o
+                0x0000479c                main
+ .text.vidInit  0x000048aa       0x76 ./main.o
  .text.APP_vidSetMode
-                0x00004c82      0x1aa ./mode_prg.o
-                0x00004c82                APP_vidSetMode
+                0x00004920      0x1aa ./mode_prg.o
+                0x00004920                APP_vidSetMode
  .text.MODE_vidIdle
-                0x00004e2c       0x6a ./mode_prg.o
-                0x00004e2c                MODE_vidIdle
+                0x00004aca       0x6a ./mode_prg.o
+                0x00004aca                MODE_vidIdle
  .text.MODE_vidRightBlink
-                0x00004e96       0x4e ./mode_prg.o
-                0x00004e96                MODE_vidRightBlink
+                0x00004b34       0x4e ./mode_prg.o
+                0x00004b34                MODE_vidRightBlink
  .text.MODE_vidLeftBlink
-                0x00004ee4       0x4e ./mode_prg.o
-                0x00004ee4                MODE_vidLeftBlink
+                0x00004b82       0x4e ./mode_prg.o
+                0x00004b82                MODE_vidLeftBlink
  .text.MODE_vidHazardBlink
-                0x00004f32       0x30 ./mode_prg.o
-                0x00004f32                MODE_vidHazardBlink
+                0x00004bd0       0x30 ./mode_prg.o
+                0x00004bd0                MODE_vidHazardBlink
  .text.MODE_vidInit
-                0x00004f62       0x18 ./mode_prg.o
-                0x00004f62                MODE_vidInit
+                0x00004c00       0x18 ./mode_prg.o
+                0x00004c00                MODE_vidInit
  .text.MODE_vidTask
-                0x00004f7a       0x6a ./mode_prg.o
-                0x00004f7a                MODE_vidTask
- .text.libgcc   0x00004fe4        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00004fe4        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x00004fe4        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x00004fe4       0x3e d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
-                0x00004fe4                __mulsi3
- .text.libgcc   0x00005022       0x44 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
-                0x00005022                __udivmodsi4
- .text.libgcc   0x00005066       0x38 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x00005066                __prologue_saves__
- .text.libgcc   0x0000509e       0x36 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x0000509e                __epilogue_restores__
-                0x000050d4                . = ALIGN (0x2)
+                0x00004c18       0x6a ./mode_prg.o
+                0x00004c18                MODE_vidTask
+ .text.libgcc   0x00004c82        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00004c82        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00004c82        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00004c82       0x3e d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                0x00004c82                __mulsi3
+ .text.libgcc   0x00004cc0       0x44 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x00004cc0                __udivmodsi4
+ .text.libgcc   0x00004d04       0x38 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00004d04                __prologue_saves__
+ .text.libgcc   0x00004d3c       0x36 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x00004d3c                __epilogue_restores__
+                0x00004d72                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000050d4        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x000050d4                exit
-                0x000050d4                _exit
+ .fini9         0x00004d72        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00004d72                exit
+                0x00004d72                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -418,11 +418,11 @@ LOAD d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000050d4        0x4 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00004d72        0x4 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000050d8                _etext = .
+                0x00004d76                _etext = .
 
-.data           0x00800060      0x150 load address 0x000050d8
+.data           0x00800060      0x156 load address 0x00004d76
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -431,99 +431,100 @@ LOAD d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.
  .data          0x00800060        0x0 ./DIO/DIO_program.o
  .data          0x00800060        0x0 ./CLCD/CLCD_program.o
  .data          0x00800060        0x0 ./main.o
- .data          0x00800060       0x2c ./mode_prg.o
- .data          0x0080008c        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .data          0x0080008c        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .data          0x0080008c        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .data          0x0080008c        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ashldi3.o)
- .data          0x0080008c        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
- .data          0x0080008c        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivdi3.o)
- .data          0x0080008c        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_umoddi3.o)
- .data          0x0080008c        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
- .data          0x0080008c        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .data          0x0080008c        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .data          0x0080008c        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .data          0x0080008c        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .data          0x0080008c        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .data          0x0080008c        0x8 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
-                0x0080008c                __thenan_sf
- .data          0x00800094        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
- .data          0x00800094        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .data          0x00800094        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .data          0x00800094        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .data          0x00800094      0x100 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
-                0x00800094                __clz_tab
- .data          0x00800194        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .data          0x00800194        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .data          0x00800194        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .data          0x00800060       0x2b ./mode_prg.o
+ .data          0x0080008b        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x0080008b        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x0080008b        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x0080008b        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ashldi3.o)
+ .data          0x0080008b        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
+ .data          0x0080008b        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivdi3.o)
+ .data          0x0080008b        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_umoddi3.o)
+ .data          0x0080008b        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
+ .data          0x0080008b        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
+ .data          0x0080008b        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .data          0x0080008b        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .data          0x0080008b        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .data          0x0080008b        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .data          0x0080008b        0x8 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+                0x0080008b                __thenan_sf
+ .data          0x00800093        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .data          0x00800093        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .data          0x00800093        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .data          0x00800093        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .data          0x00800093      0x100 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
+                0x00800093                __clz_tab
+ .data          0x00800193        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .data          0x00800193        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .data          0x00800193        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
  *(.data*)
  .data.Local_u8SSDNumbers
-                0x00800194        0xa ./SSD/SSD_program.o
- .data.R_SSD    0x0080019e        0x4 ./main.o
-                0x0080019e                R_SSD
- .data.L_SSD    0x008001a2        0x4 ./main.o
-                0x008001a2                L_SSD
- .data.R_SW     0x008001a6        0x3 ./main.o
-                0x008001a6                R_SW
- .data.H_SW     0x008001a9        0x3 ./main.o
-                0x008001a9                H_SW
- .data.L_SW     0x008001ac        0x3 ./main.o
-                0x008001ac                L_SW
+                0x00800193        0xa ./SSD/SSD_program.o
+ .data.Local_u8SegmentNum
+                0x0080019d        0x8 ./SSD/SSD_program.o
+ .data.R_SSD    0x008001a5        0x4 ./main.o
+                0x008001a5                R_SSD
+ .data.L_SSD    0x008001a9        0x4 ./main.o
+                0x008001a9                L_SSD
+ .data.R_SW     0x008001ad        0x3 ./main.o
+                0x008001ad                R_SW
+ .data.H_SW     0x008001b0        0x3 ./main.o
+                0x008001b0                H_SW
+ .data.L_SW     0x008001b3        0x3 ./main.o
+                0x008001b3                L_SW
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.d*)
-                0x008001b0                . = ALIGN (0x2)
- *fill*         0x008001af        0x1 00
-                0x008001b0                _edata = .
-                0x008001b0                PROVIDE (__data_end, .)
+                0x008001b6                . = ALIGN (0x2)
+                0x008001b6                _edata = .
+                0x008001b6                PROVIDE (__data_end, .)
 
-.bss            0x008001b0        0x2
-                0x008001b0                PROVIDE (__bss_start, .)
+.bss            0x008001b6        0x2
+                0x008001b6                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
- .bss           0x008001b0        0x0 ./SW/SW_program.o
- .bss           0x008001b0        0x0 ./SSD/SSD_program.o
- .bss           0x008001b0        0x0 ./DIO/DIO_program.o
- .bss           0x008001b0        0x0 ./CLCD/CLCD_program.o
- .bss           0x008001b0        0x0 ./main.o
- .bss           0x008001b0        0x0 ./mode_prg.o
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ashldi3.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivdi3.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_umoddi3.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .bss           0x008001b0        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x008001b6        0x0 ./SW/SW_program.o
+ .bss           0x008001b6        0x0 ./SSD/SSD_program.o
+ .bss           0x008001b6        0x0 ./DIO/DIO_program.o
+ .bss           0x008001b6        0x0 ./CLCD/CLCD_program.o
+ .bss           0x008001b6        0x0 ./main.o
+ .bss           0x008001b6        0x0 ./mode_prg.o
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ashldi3.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivdi3.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_umoddi3.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .bss           0x008001b6        0x0 d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
  *(.bss*)
  *(COMMON)
- COMMON         0x008001b0        0x2 ./mode_prg.o
-                0x008001b0                MODE_STATE
-                0x008001b1                PRE_STATE
-                0x008001b2                PROVIDE (__bss_end, .)
-                0x000050d8                __data_load_start = LOADADDR (.data)
-                0x00005228                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x008001b6        0x2 ./mode_prg.o
+                0x008001b6                MODE_STATE
+                0x008001b7                PRE_STATE
+                0x008001b8                PROVIDE (__bss_end, .)
+                0x00004d76                __data_load_start = LOADADDR (.data)
+                0x00004ecc                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x008001b2        0x0
-                0x008001b2                PROVIDE (__noinit_start, .)
+.noinit         0x008001b8        0x0
+                0x008001b8                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x008001b2                PROVIDE (__noinit_end, .)
-                0x008001b2                _end = .
-                0x008001b2                PROVIDE (__heap_start, .)
+                0x008001b8                PROVIDE (__noinit_end, .)
+                0x008001b8                _end = .
+                0x008001b8                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -541,23 +542,23 @@ LOAD d:/mai/embeded_systems/embeddedmk/sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x2a90
+.stab           0x00000000     0x258c
  *(.stab)
- .stab          0x00000000      0x4e0 ./SW/SW_program.o
- .stab          0x000004e0      0x360 ./SSD/SSD_program.o
-                                0x36c (size before relaxing)
- .stab          0x00000840      0xc9c ./DIO/DIO_program.o
-                                0xca8 (size before relaxing)
- .stab          0x000014dc      0xd80 ./CLCD/CLCD_program.o
-                                0xf18 (size before relaxing)
- .stab          0x0000225c      0x3b4 ./main.o
-                                0x594 (size before relaxing)
- .stab          0x00002610      0x480 ./mode_prg.o
+ .stab          0x00000000      0x300 ./SW/SW_program.o
+ .stab          0x00000300      0x3a8 ./SSD/SSD_program.o
+                                0x3b4 (size before relaxing)
+ .stab          0x000006a8      0x7c8 ./DIO/DIO_program.o
+                                0x7d4 (size before relaxing)
+ .stab          0x00000e70      0xedc ./CLCD/CLCD_program.o
+                                0xee8 (size before relaxing)
+ .stab          0x00001d4c      0x3c0 ./main.o
+                                0x564 (size before relaxing)
+ .stab          0x0000210c      0x480 ./mode_prg.o
                                 0x540 (size before relaxing)
 
-.stabstr        0x00000000     0x1188
+.stabstr        0x00000000     0x10a5
  *(.stabstr)
- .stabstr       0x00000000     0x1188 ./SW/SW_program.o
+ .stabstr       0x00000000     0x10a5 ./SW/SW_program.o
 
 .stab.excl
  *(.stab.excl)

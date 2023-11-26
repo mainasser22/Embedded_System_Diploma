@@ -75,12 +75,12 @@ void APP_vidSetMode(MODE_enutModeState enutSetMode)
 		SSD_voidSendNumber( R_SSD,0);
 		CLCD_voidSendString((u8*)"RIGHT Mode");
 		break;
-	case HAZZARD_BLINK:
+	case HAZARD_BLINK:
 		SSD_voidEnable(L_SSD);
 		SSD_voidEnable(R_SSD);
 		SSD_voidSendNumber( L_SSD,0);
 		SSD_voidSendNumber( R_SSD,0);
-		CLCD_voidSendString((u8*)"HAZZARD Mode");
+		CLCD_voidSendString((u8*)"HAZARD Mode");
 		break;
 	case LEFT_BLINK:
 		SSD_voidDisable(R_SSD);
@@ -105,7 +105,7 @@ void MODE_vidIdle (void)
 	}
 	else if (SW_u8GetPressed (H_SW))
 	{
-		MODE_STATE=HAZZARD_BLINK;
+		MODE_STATE=HAZARD_BLINK;
 		PRE_STATE=IDLE;
 	}
 	else if (SW_u8GetPressed (L_SW))
@@ -127,7 +127,7 @@ void MODE_vidRightBlink (void)
 	}
 	else*/ if (SW_u8GetPressed (H_SW))
 	{
-		MODE_STATE=HAZZARD_BLINK;
+		MODE_STATE=HAZARD_BLINK;
 		PRE_STATE=RIGHT_BLINK;
 	}
 	else if (SW_u8GetPressed (L_SW))
@@ -146,7 +146,7 @@ void MODE_vidLeftBlink (void)
 	}
 	else if (SW_u8GetPressed (H_SW))
 	{
-		MODE_STATE=HAZZARD_BLINK;
+		MODE_STATE=HAZARD_BLINK;
 		PRE_STATE=LEFT_BLINK;
 	}
 /*	else if (SW_u8GetPressed (L_SW))
@@ -157,13 +157,13 @@ void MODE_vidLeftBlink (void)
 }
 void MODE_vidHazardBlink (void)
 {
-	/* Set Mode to HAZZARD_BLINK */
+	/* Set Mode to HAZARD_BLINK */
 
-	APP_vidSetMode(HAZZARD_BLINK);
+	APP_vidSetMode(HAZARD_BLINK);
 	/* Check the SWs */
 /*	if (SW_u8GetPressed (R_SW))
 	{
-		MODE_STATE=HAZZARD_BLINK;
+		MODE_STATE=HAZARD_BLINK;
 	}
 	else */ if (SW_u8GetPressed (H_SW))
 	{
@@ -171,7 +171,7 @@ void MODE_vidHazardBlink (void)
 	}
 /*	else if (SW_u8GetPressed (L_SW))
 	{
-		MODE_STATE=HAZZARD_BLINK;
+		MODE_STATE=HAZARD_BLINK;
 	}
 */
 }
@@ -210,7 +210,7 @@ void MODE_vidTask(void)
 	case RIGHT_BLINK:
 		MODE_vidRightBlink ();
 		break;
-	case HAZZARD_BLINK:
+	case HAZARD_BLINK:
 		MODE_vidHazardBlink();
 		break;
 	case LEFT_BLINK:
@@ -224,7 +224,7 @@ void MODE_vidTask(void)
 		MODE_vidIdle ();
 	else if(MODE_STATE == RIGHT_BLINK)
 		MODE_vidRightBlink ();
-	else if(MODE_STATE == HAZZARD_BLINK)
+	else if(MODE_STATE == HAZARD_BLINK)
 		MODE_vidHazardBlink();
 	else if(MODE_STATE == LEFT_BLINK)
 		MODE_vidLeftBlink();

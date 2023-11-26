@@ -1,37 +1,32 @@
 /*
- *<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<    DIO_register.h / DIO_private.h   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ * DIO_private.h
  *
- * Author  : Mai Nasser
- *  Layer  : MCAL
- *  SWC    : DIO/GPIO
- *
- */ 
+ *      Author: Mai Nasser
+ *      Layer:MCAL
+ *      SWC:DIO/GPIO
+ */
 
-#ifndef _DIO_PRIVATE_H_
-#define _DIO_PRIVATE_H_
+#ifndef DIO_DIO_PRIVATE_H_
+#define DIO_DIO_PRIVATE_H_
 
-/* Group A Registers */
-#define PORTA_Register  *((volatile u8*)0x3B)
-#define DDRA_Register   *((volatile u8*)0x3A)
-#define PINA_Register   *((volatile u8*)0x39)
+/*Group A */
+#define PORTA *((volatile u8*)0x3B)
+#define DDRA  *((volatile u8*)0x3A)
+#define PINA  *((volatile u8*)0x39)
 
-/* Group B Registers */
-#define PORTB_Register  *((volatile u8*)0x38)
-#define DDRB_Register   *((volatile u8*)0x37)
-#define PINB_Register   *((volatile u8*)0x36)
+/*Group B */
+#define PORTB *((volatile u8*)0x38)
+#define DDRB  *((volatile u8*)0x37)
+#define PINB  *((volatile u8*)0x36)
 
-/* Group C Registers */
-#define PORTC_Register  *((volatile u8*)0x35)
-#define DDRC_Register   *((volatile u8*)0x34)
-#define PINC_Register   *((volatile u8*)0x33)
+/*Group C */
+#define PORTC *((volatile u8*)0x35)
+#define DDRC  *((volatile u8*)0x34)
+#define PINC  *((volatile u8*)0x33)
 
-/* Group D Registers */
-#define PORTD_Register  *((volatile u8*)0x32)
-#define DDRD_Register   *((volatile u8*)0x31)
-#define PIND_Register   *((volatile u8*)0x30)
+/*Group D */
+#define PORTD *((volatile u8*)0x32)
+#define DDRD  *((volatile u8*)0x31)
+#define PIND  *((volatile u8*)0x30)
 
-/*PULL UP */
-#define  SFIOR   *((volatile u8*)0x50)
-
-
-#endif
+#endif /* DIO_DIO_PRIVATE_H_ */

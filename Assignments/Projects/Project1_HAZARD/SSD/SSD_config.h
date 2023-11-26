@@ -1,6 +1,14 @@
+/*
+ * SSD.config.h
+ *
+ *      Author: Mai Nasser
+ *      Layer:HAL
+ *      SWC:SSD
+ */
+
+#ifndef SSD_SSD_CONFIG_H_
+#define SSD_SSD_CONFIG_H_
 
 
-#ifndef SSD_CONFIG_H_
-#define SSD_CONFIG_H_
 
-#endif
+#endif /* SSD_SSD_CONFIG_H_ */

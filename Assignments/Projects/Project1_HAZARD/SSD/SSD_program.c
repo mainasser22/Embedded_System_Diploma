@@ -1,10 +1,9 @@
 /*
- *<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<    Seven_Segment_Display_program.c    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ * SSD_program.c
  *
- * Author  : Mai Nasser
- *  Layer  : HAL
- *  SWC    : Seven_Segments
- *
+ *      Author: Mai Nasser
+ *      Layer:HAL
+ *      SWC:SSD
  */
 #include "../LIB/STD_TYPES.h"
 #include "../LIB/BIT_MATH.h"
@@ -16,83 +15,75 @@
 #include "SSD_config.h"
 
 static u8 Local_u8SSDNumbers[10] = SSD_NUMBER_ARR ;
+static u8 Local_u8SegmentNum[8] = SSD_SegmentNum_ARR;
 
-//====================================================================================================================================================
-/*
- * Breif : This Function initialize the port which connected to 7 Seg leds as output pins ( 8 Pins or Port )
- * Parameters :
-            =>Copy_u8PORT --> Port Name [ SSD_PORTA ,	SSD_PORTB , SSD_PORTC , SSD_PORTD ]
- * return : void
- */
+
 void SSD_voidInitialDataPort  (SSD_Type Copy_structConfig )
 {
-	DIO_enumSetPortDirection    ( Copy_structConfig.DataPort , 0xFF );
+	DIO_VoidSetPortDirection( Copy_structConfig.DataPort , 0xFF );
 }
 
-//----------------------------------------------------------------------------------------------------------------------------------------------------
-/*
- * Breif : This Function write Number on 7 seg [ 0 : 9 ]
- * Parameters : => struct has the SSD type , data port and enable(port & pin)
- * return : void
- */
+
 void SSD_voidSendNumber( SSD_Type Copy_structConfig , u8 Copy_u8Number ){
 
 	if( Copy_structConfig.Type == SSD_COMMON_CATHODE ){
 
-		DIO_enumSetPortValue( Copy_structConfig.DataPort , Local_u8SSDNumbers[ Copy_u8Number ] );
+		DIO_VoidSetPortValue( Copy_structConfig.DataPort , Local_u8SSDNumbers[ Copy_u8Number ] );
 
 	}else if( Copy_structConfig.Type == SSD_COMMON_ANODE ){
 
-		DIO_enumSetPortValue( Copy_structConfig.DataPort , ~( Local_u8SSDNumbers[ Copy_u8Number ] ) );
+		DIO_VoidSetPortValue( Copy_structConfig.DataPort , ~( Local_u8SSDNumbers[ Copy_u8Number ] ) );
 
 	}
 
 }
 
-//----------------------------------------------------------------------------------------------------------------------------------------------------
-/*
- * Breif : This Function enable common pin
- * Parameters : => struct has the SSD type , data port and enable(port & pin)
- * return : void
- */
+void SSD_voidTurnSegment      ( SSD_Type Copy_structConfig , u8 Copy_u8SegNumber )
+{
+
+	if( Copy_structConfig.Type == SSD_COMMON_CATHODE ){
+
+		DIO_VoidSetPortValue( Copy_structConfig.DataPort , Local_u8SegmentNum[ Copy_u8SegNumber ] );
+
+	}else if( Copy_structConfig.Type == SSD_COMMON_ANODE ){
+
+		DIO_VoidSetPortValue( Copy_structConfig.DataPort , ~( Local_u8SegmentNum[ Copy_u8SegNumber ] ) );
+
+	}
+}
+
 void SSD_voidEnable    ( SSD_Type Copy_structConfig ){
 
 	if( Copy_structConfig.Type == SSD_COMMON_CATHODE ){
 
-		DIO_enumSetPinDirection( Copy_structConfig.EnablePort , Copy_structConfig.EnablePin , DIO_PIN_HIGH );
-		DIO_enumSetPinValue( Copy_structConfig.EnablePort , Copy_structConfig.EnablePin , DIO_PIN_LOW );
+		DIO_VoidSetPinDirection( Copy_structConfig.EnablePort , Copy_structConfig.EnablePin , DIO_PIN_HIGH );
+		DIO_VoidSetPinValue( Copy_structConfig.EnablePort , Copy_structConfig.EnablePin , DIO_PIN_LOW );
 
 	}else if( Copy_structConfig.Type == SSD_COMMON_ANODE ){
 
-		DIO_enumSetPinDirection( Copy_structConfig.EnablePort , Copy_structConfig.EnablePin , DIO_PIN_HIGH );
-		DIO_enumSetPinValue( Copy_structConfig.EnablePort , Copy_structConfig.EnablePin , DIO_PIN_HIGH );
+		DIO_VoidSetPinDirection( Copy_structConfig.EnablePort , Copy_structConfig.EnablePin , DIO_PIN_HIGH );
+		DIO_VoidSetPinValue( Copy_structConfig.EnablePort , Copy_structConfig.EnablePin , DIO_PIN_HIGH );
 
 	}
 
 }
 
-//----------------------------------------------------------------------------------------------------------------------------------------------------
-/*
- * Breif : This Function disable common pin
- * Parameters : => struct has the SSD type , data port and enable(port & pin)
- * return : void
- */
+
 void SSD_voidDisable   ( SSD_Type Copy_structConfig ){
 
 	if( Copy_structConfig.Type == SSD_COMMON_CATHODE ){
 
-		DIO_enumSetPinDirection( Copy_structConfig.EnablePort , Copy_structConfig.EnablePin , DIO_PIN_HIGH );
-		DIO_enumSetPinValue( Copy_structConfig.EnablePort , Copy_structConfig.EnablePin , DIO_PIN_HIGH );
+		DIO_VoidSetPinDirection( Copy_structConfig.EnablePort , Copy_structConfig.EnablePin , DIO_PIN_HIGH );
+		DIO_VoidSetPinValue( Copy_structConfig.EnablePort , Copy_structConfig.EnablePin , DIO_PIN_HIGH );
 
 	}
 	else if( Copy_structConfig.Type == SSD_COMMON_ANODE ){
 
-		DIO_enumSetPinDirection( Copy_structConfig.EnablePort , Copy_structConfig.EnablePin , DIO_PIN_HIGH );
-		DIO_enumSetPinValue( Copy_structConfig.EnablePort , Copy_structConfig.EnablePin , DIO_PIN_LOW );
+		DIO_VoidSetPinDirection( Copy_structConfig.EnablePort , Copy_structConfig.EnablePin , DIO_PIN_HIGH );
+		DIO_VoidSetPinValue( Copy_structConfig.EnablePort , Copy_structConfig.EnablePin , DIO_PIN_LOW );
 
 	}
 
 }
 
-//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<    END    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
